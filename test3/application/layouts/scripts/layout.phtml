@@ -1,0 +1,47 @@
+<?php
+
+	//output doctype
+	echo $this->doctype();
+?>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+
+		<!-- set title -->
+		<title>Zend Framework Test 3</title>
+
+		<!-- set paramount meta tags -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<!-- include css -->
+		<?php echo $this->headLink()->appendStylesheet( $this->baseUrl() . '/media/css/global.css' ) . "\n"; ?>
+
+	</head>
+	<body>
+
+		<!-- why not moving this to layout? -->
+
+		<div id="header" style="background-color: #EEEEEE; height: 30px;">
+		    <div id="header-logo" style="float: left">
+		        <b>ZEND Framework Test 3</b>
+		    </div>
+		    <div id="header-navigation" style="float: right">
+		        <a href="<?php echo $this->url(
+		            array('controller'=>'guestbook'),
+		            'default',
+		            true) ?>">
+		            Guestbook
+		        </a>
+		    </div>
+		</div>
+
+
+
+
+<?php
+
+	//output the layout content
+	echo $this->layout()->content;
+?>
+	</body>
+</html>
